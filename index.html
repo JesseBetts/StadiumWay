@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stadium Way & College Way Apartments near SUU</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Optional: Link to a font for better typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Stadium Way & College Way Apartments</h1>
+                <p>Near SUU</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="apartments.html">Apartments</a></li>
+                    <li><a href="#apply">New Applicant</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#sign-in" class="sign-in-link">Sign In</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>The student housing that feels like home</h2>
+                <p>All rates include ALL utilities! We have availability!</p>
+                <a href="#apply" class="btn">Apply Now</a>
+            </div>
+        </section>
+
+        <section class="carousel-section">
+            <div class="container">
+                <h3>See the Apartments & Amenities</h3>
+                <div class="photo-carousel">
+                    <!-- Add your image tags here -->
+                    <div class="carousel-images">
+                        <img src="images/photo1.jpg" alt="Apartment Interior View 1">
+                        <img src="images/photo2.jpg" alt="Apartment Kitchen View">
+                        <img src="images/photo3.jpg" alt="Clubhouse View">
+                        <img src="images/photo4.jpg" alt="Hot Tub Area">
+                        <img src="images/photo5.jpg" alt="Clubhouse View">
+                        <img src="images/photo6.jpg" alt="Hot Tub Area">
+                        <!-- Add more image tags as needed -->
+                    </div>
+                    <!-- Navigation buttons (will need JS to function) -->
+                    <button class="carousel-nav prev">Previous</button>
+                    <button class="carousel-nav next">Next</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-blocks">
+            <div class="container">
+                <div class="info-block">
+                    <h4>Stadium Way Apartments</h4>
+                    <p>Onsite Manager: Lacee & Ethan Keffer</p>
+                    <p>1480 W Center St #23, Cedar City, UT 84720</p>
+                    <p>Call: 435-586-1121</p>
+                    <p>Text: 435-677-6884</p>
+                    <p>Office hours: M-F 10am-4pm</p>
+                </div>
+
+                <div class="info-block">
+                    <h4>College Way Apartments</h4>
+                    <p>Onsite Managers: Maddi & Trevor Green</p>
+                    <p>130 N College Way #1, Cedar City, UT 84720</p>
+                    <p>Call: 435-586-2180</p>
+                    <p>Text: 435-200-4578</p>
+                    <p>Office hours: M-F 10am-4pm</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="amenities-overview">
+            <div class="container">
+                <h3>What We Offer</h3>
+                <p>Within walking distance to Southern Utah University, the apartment complex offers an indoor hot tub,
+                    sand volleyball pit, park with picnic table and barbecue grill, clubhouse with Big Screen TV room,
+                    pool table, foosball table, and vending machines.</p>
+                <p>Most of these amenities are located at the Stadium Way complex. College Way Tenants have full use of
+                    the amenities. College Way is located 1 block from Stadium Way.</p>
+                <p>Every apartment has a full-size washer and dryer.</p>
+                <p>To apply, click "New Applicant" from the menu above.</p>
+            </div>
+        </section>
+
+        <section class="features-bar">
+            <div class="container">
+                <div class="feature-item">We Accept Most Major Credit Cards!</div>
+                <div class="feature-item">Free Internet!</div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Stadium Way & College Way Apartments. All rights reserved.</p>
+            <!-- Add more footer links or info here if needed -->
+        </div>
+    </footer>
+
+    <!-- Optional: Link to a basic JavaScript file for the carousel later -->
+    <!-- <script src="script.js"></script> -->
+    <script>
+        const carouselImages = document.querySelector('.carousel-images');
+        const images = document.querySelectorAll('.carousel-images img');
+
+        let currentIndex = 0;
+
+        function showNextImage() {
+            currentIndex++;
+            if (currentIndex >= images.length) {
+                currentIndex = 0;
+            }
+            const offset = -currentIndex * images[0].clientWidth;
+            carouselImages.style.transform = `translateX(${offset}px)`;
+        }
+
+        // Rotate every 3 seconds
+        setInterval(showNextImage, 3000);
+
+        // Optional: handle resizing so carousel stays correct
+        window.addEventListener('resize', () => {
+            const offset = -currentIndex * images[0].clientWidth;
+            carouselImages.style.transform = `translateX(${offset}px)`;
+        });
+    </script>
+
+</body>
+
+</html>
