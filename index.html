@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stadium Way & College Way Apartments near SUU</title>
+    <title>Stadium Way & College Way Apartments</title>
     <link rel="stylesheet" href="style.css">
     <!-- Optional: Link to a font for better typography -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
@@ -16,8 +16,8 @@
     <header>
         <div class="container">
             <div class="logo">
-                <h1>Stadium Way & College Way Apartments</h1>
-                <p>Near SUU</p>
+                <h1>Stadium Way & College Way</h1>
+                <p>At SUU</p>
             </div>
             <nav>
                 <ul>
@@ -44,7 +44,6 @@
             <div class="container">
                 <h3>See the Apartments & Amenities</h3>
                 <div class="photo-carousel">
-                    <!-- Add your image tags here -->
                     <div class="carousel-images">
                         <img src="images/photo1.jpg" alt="Apartment Interior View 1">
                         <img src="images/photo2.jpg" alt="Apartment Kitchen View">
@@ -52,9 +51,7 @@
                         <img src="images/photo4.jpg" alt="Hot Tub Area">
                         <img src="images/photo5.jpg" alt="Clubhouse View">
                         <img src="images/photo6.jpg" alt="Hot Tub Area">
-                        <!-- Add more image tags as needed -->
                     </div>
-                    <!-- Navigation buttons (will need JS to function) -->
                     <button class="carousel-nav prev">Previous</button>
                     <button class="carousel-nav next">Next</button>
                 </div>
@@ -114,30 +111,7 @@
 
     <!-- Optional: Link to a basic JavaScript file for the carousel later -->
     <!-- <script src="script.js"></script> -->
-    <script>
-        const carouselImages = document.querySelector('.carousel-images');
-        const images = document.querySelectorAll('.carousel-images img');
-
-        let currentIndex = 0;
-
-        function showNextImage() {
-            currentIndex++;
-            if (currentIndex >= images.length) {
-                currentIndex = 0;
-            }
-            const offset = -currentIndex * images[0].clientWidth;
-            carouselImages.style.transform = `translateX(${offset}px)`;
-        }
-
-        // Rotate every 3 seconds
-        setInterval(showNextImage, 3000);
-
-        // Optional: handle resizing so carousel stays correct
-        window.addEventListener('resize', () => {
-            const offset = -currentIndex * images[0].clientWidth;
-            carouselImages.style.transform = `translateX(${offset}px)`;
-        });
-    </script>
+    <script src="carousel.js" defer></script>
 
 </body>
 
